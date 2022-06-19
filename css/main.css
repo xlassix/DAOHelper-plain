@@ -1,0 +1,137 @@
+:root{
+    --opacity: 0.8;
+    --primary: rgb(16 14 46);
+    --max-container-width: 1100px;
+    --light: rgb(255, 252, 252);
+    --dark: rgb(13, 12, 20);
+    --color-theme-open: rgb(196, 196, 196);
+    --color-theme-assigned: rgb(95, 113, 212);
+    --color-theme-review: rgb(165, 22, 185);
+    --color-theme-reward:rgb(6, 219, 172);
+    --color-card: rgb(90 72 96/var(--opacity));
+}
+body{
+    padding: 0;
+    margin: 0;
+    display: block;
+    gap:1% ;
+    background-color: var(--dark);
+    background-image: url("../img/img.png");
+    background-size:   cover;   
+    background-repeat: no-repeat;
+    background-position:0 -10px;
+    font-family: ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+}
+section{
+    margin: 4rem 2rem;
+}
+main{
+    width: calc(100vw-6rem);
+    background-color: var(--primary) ;
+    max-width: var(--max-container-width);
+    margin: auto;
+    border-radius: 1rem;
+    color: var(--light);
+    padding: 1rem;
+    overflow-y: auto;
+}
+
+h1{
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    padding: 0.2rem;
+    border-bottom: 0.5px solid rgb(255 255 255 /var(--opacity));
+}
+.openBounties{
+    --color-scheme :var(--color-theme-open);
+}
+.assigned{
+    --color-scheme : var(--color-theme-assigned);
+}
+.underReview{
+    --color-scheme : var(--color-theme-review);
+}
+.rewarded{
+    --color-scheme : var(--color-theme-reward);
+}
+.bounties{
+    display: flex;
+    gap:1rem;
+    width: 100%;
+}
+.bounties > div{
+    flex-basis: 24%;
+    min-width: 16rem;
+    transition-duration: 300ms;
+    transition-delay: 10ms;
+}
+
+.bounties h3{
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    border-top-left-radius: .5rem;
+    border-top-right-radius: .5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    background-color: var(--color-card);
+    padding: 1rem;
+    border-bottom: 2px solid var(--color-scheme);
+}
+
+.cards {
+    border-right: 1px solid var(--color-card);
+    border-left: 1px solid var(--color-card);
+    transition-duration: 300ms;
+    transition-delay: 10ms;
+}
+article{
+    background-color: var(--color-card);
+    padding-top: 1.25rem;
+    border-radius: 0.75rem;
+    cursor: grab;
+    margin: 0.75rem;
+    margin-bottom: 1rem;
+    transition-duration: 300ms;
+}
+article>h6{
+    padding: 0 1.25rem;
+    margin: 0;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    text-transform: capitalize;
+    font-weight: 700;
+    margin-bottom: 1.25rem;
+}
+article>p{
+    font-size: .875rem;
+    line-height: 1.25rem;
+    padding: 0.5rem 1.25rem;
+}
+article>div{
+    background-color: var(--color-scheme);
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 1.25rem;
+    border-bottom-left-radius: 0.75rem;
+    border-bottom-right-radius: 0.75rem;
+    font-size: 0.78rem;
+}
+
+.openBounties article>div{
+    color: var(--dark);
+}
+
+.hide{
+    display: none;
+}
+.dragging{
+    opacity: 1;
+}
+.beforeCardSpace{
+    margin-top:10rem;
+}
+.closeBeforeCardSpace{
+    margin-top:10rem;
+}
