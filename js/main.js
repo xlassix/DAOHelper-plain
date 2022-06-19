@@ -1,6 +1,8 @@
+//initialize Draggable references
 const draggables = document.querySelectorAll("article");
 const dragContainers = document.querySelectorAll(".bounties > div ");
 
+//Add Event Listeners to Draggable references
 draggables.forEach((draggableElement) => {
   draggableElement.addEventListener("dragstart", () => {
     draggableElement.classList.add("dragging");
@@ -39,6 +41,7 @@ dragContainers.forEach((draggableContainer) => {
   );
 });
 
+//helper functions for smooth animation
 function getDragAfterElement(container, y) {
   const draggableElems = [
     ...container.lastElementChild.querySelectorAll("article:not(.dragging)"),
