@@ -60,6 +60,7 @@ h1{
     display: flex;
     gap:1rem;
     width: 100%;
+    overflow-y: auto;
 }
 .bounties > div{
     flex-basis: 24%;
@@ -130,8 +131,5 @@ article>div{
     opacity: 1;
 }
 .beforeCardSpace{
-    margin-top:10rem;
-}
-.closeBeforeCardSpace{
     margin-top:10rem;
 }
